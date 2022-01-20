@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;1,300;1,400;1,600;1,700;1,800&family=Open+Sans:ital,wght@0,400;0,500;1,600&family=Oswald:wght@200;500;700&family=Roboto:ital,wght@0,400;0,700;0,900;1,400&family=Smooch&family=Zen+Kurenaido&display=swap');
+
+:root {
+  --green: #27ae60;
+  --red: #e00303;
+  --dark-color: #be1111;
+  --black: #444;
+  --light-color: #666;
+  --border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  --border-hover: 0.1rem solid var(--black);
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+  transition: width none;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+html::-webkit-scrollbar-track {
+  background: turquoise;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+/* header-area */
+.header .header-one {
+  background: #fff;
+  padding: 1.5rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .header-one .logo {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: var(--black);
+}
+.header .header-one .logo i {
+  color: var(--red);
+}
+
+.header .header-one .search-form {
+  width: 50rem;
+  height: 5rem;
+  border: var(--border);
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 0.7rem;
+}
+.header .header-one .search-form input {
+  font-size: 1.6rem;
+  padding: 0 1.2rem;
+  height: 100%;
+  width: 100%;
+  text-transform: none;
+  color: var(--black);
+}
+
+.header .header-one .search-form label {
+  font-size: 2.5rem;
+  padding-right: 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+}
+.header .header-one .search-form label:hover {
+  color: var(--red);
+}
+
+.header .header-one .icons div,
+.header .header-one .icons a {
+  font-size: 2.5rem;
+  margin-left: 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+}
+.header .header-one .icons div:hover,
+.header .header-one .icons a:hover {
+  color: var(--red);
+}
+#search-btn {
+  display: none;
+}
+
+/* header part two */
+.header .header-two {
+  background: var(--red);
+}
+
+.header .header-two .navbar {
+  text-align: center;
+}
+.header .header-two .navbar a {
+  color: wheat;
+  display: inline-block;
+  padding: 1.2rem;
+  font-size: 1.7rem;
+}
+
+.header .header-two .navbar a:hover {
+  background: var(--dark-color);
+}
+
+.header .header-two .active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* media queries */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .header-two {
+    display: none;
+  }
+  #search-btn {
+    display: inline-block;
+  }
+  .header .header-one {
+    padding: 2rem;
+  }
+  .header .header-one {
+    box-shadow: var(--box-shadow);
+    position: relative;
+  }
+  .header .header-one .search-form {
+    position: absolute;
+    top: 115%;
+    right: 2rem;
+    width: 90%;
+    box-shadow: var(--box-shadow);
+  }
+  .header .header-one .search-form .active {
+    top: 115%;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
