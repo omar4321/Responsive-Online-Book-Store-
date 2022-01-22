@@ -24,7 +24,16 @@ window.onload = () => {
   } else {
     document.querySelector('.header .header-two').classList.remove('active');
   }
+
+  fadeOut();
 };
+function loader() {
+  document.querySelector('.loader-container').classList.add('active');
+}
+
+function fadeOut() {
+  setTimeout(loader, 4000);
+}
 
 var swiper = new Swiper('.book-slider', {
   loop: true,

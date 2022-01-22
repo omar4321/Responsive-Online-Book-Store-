@@ -702,6 +702,26 @@ button a {
 .footer .credit span {
   color: var(--red);
 }
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10000;
+  background: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-container.active {
+  display: none;
+}
+
+.loader-container img {
+  height: 10rem;
+}
 
 /* media queries */
 @media (max-width: 991px) {
